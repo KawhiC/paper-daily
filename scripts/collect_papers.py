@@ -320,7 +320,7 @@ def call_openai_compatible(prompt: str) -> dict[str, Any]:
     payload = {
         "model": model,
         "temperature": float(os.getenv("LLM_TEMPERATURE", "0.2")),
-        "max_tokens": int(os.getenv("LLM_MAX_TOKENS", "700")),
+        "max_tokens": int(os.getenv("LLM_MAX_TOKENS", "1200")),
         "response_format": {"type": "json_object"},
         "messages": [
             {
@@ -344,14 +344,16 @@ def call_openai_compatible(prompt: str) -> dict[str, Any]:
 
 def build_llm_prompt(topic: Topic, paper: dict[str, Any], base_match: dict[str, Any]) -> str:
     return f"""
-请只基于论文标题、摘要、分类和我的研究方向，输出简洁中文分析。不要阅读全文式扩写，不要夸大摘要中没有的信息；如果证据不足，请明确说明。
+请根据论文标题、摘要、分类和我的研究方向，输出精确中文技术分析。不要夸大摘要中没有的信息；如果证据不足，请明确说明。
 
 我的研究方向：
 名称：{topic.name}
+描述：{topic.description}
 关键词：{", ".join(topic.keywords)}
 
 论文信息：
 标题：{paper.get("title", "")}
+作者：{", ".join(paper.get("authors", [])[:8])}
 arXiv 分类：{", ".join(paper.get("categories", []))}
 摘要：{paper.get("summary", "")}
 
@@ -362,12 +364,12 @@ arXiv 分类：{", ".join(paper.get("categories", []))}
 
 请输出 JSON，字段必须为：
 {{
-  "problem": "论文要解决的问题，中文，1句，不超过60字",
-  "method": "核心方法，中文，1句，不超过80字",
-  "innovation": "摘要体现的具体创新点，中文，1-2句，不超过120字",
-  "evidence": "摘要中可核验的实验、理论或系统证据；没有则写证据不足，不超过80字",
-  "limitations": "可能局限或需要阅读全文确认的点，不超过80字",
-  "why_relevant": "为什么匹配我的研究方向，不超过80字",
+  "problem": "论文要解决的问题，中文，1-2句",
+  "method": "核心方法，中文，1-2句",
+  "innovation": "相对已有工作的具体创新点，中文，2-3点合并成一段",
+  "evidence": "摘要中可核验的实验、理论或系统证据；没有则写证据不足",
+  "limitations": "可能局限或需要阅读全文确认的点",
+  "why_relevant": "为什么匹配我的研究方向",
   "match_score_adjustment": 0.0,
   "match_level": "high|medium|low"
 }}
@@ -523,7 +525,7 @@ def collect(config_path: Path, output_path: Path, days: int, max_per_topic: int,
             "llm_enabled": llm_enabled(),
             "llm_provider": llm_provider_label(),
             "llm_concurrency": int(os.getenv("LLM_CONCURRENCY", "4")),
-            "llm_max_tokens": int(os.getenv("LLM_MAX_TOKENS", "700")),
+            "llm_max_tokens": int(os.getenv("LLM_MAX_TOKENS", "1200")),
             "successful_fetches": successful_fetches,
             "failed_fetches": failed_fetches,
         },
