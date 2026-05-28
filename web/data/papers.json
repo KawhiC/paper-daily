@@ -1,28 +1,99 @@
 {
-  "generated_at": "Thu, 28 May 2026 13:43:34 +0000",
-  "generated_at_iso": "2026-05-28T13:43:34.801628+00:00",
-  "config_source": "issue",
+  "generated_at": "Thu, 28 May 2026 13:55:18 +0000",
+  "generated_at_iso": "2026-05-28T13:55:18.836936+00:00",
+  "config_source": "file",
   "topics": [
     {
-      "id": "cot_compression",
-      "name": "思维链压缩",
-      "description": "关注大模型思维链（Chain-of-Thought, CoT）的压缩、蒸馏、隐式推理表示与推理效率优化，研究如何降低推理 token 开销并保持 reasoning 能力。",
+      "id": "llm_low_precision_quantization",
+      "name": "大模型低精度量化",
+      "description": "关注大语言模型低比特量化、混合精度、量化感知训练、后训练量化、权重量化、激活量化、KV cache 量化以及量化对推理性能和精度的影响。",
       "keywords": [
-        "Chain-of-Thought compression",
-        "reasoning compression",
-        "latent reasoning",
-        "implicit chain-of-thought",
-        "reasoning distillation",
-        "compressed CoT",
-        "test-time scaling",
-        "token-efficient reasoning",
-        "reasoning efficiency",
-        "structured reasoning"
+        "large language model quantization",
+        "LLM quantization",
+        "low-bit quantization",
+        "post-training quantization",
+        "weight-only quantization",
+        "activation quantization",
+        "mixed precision",
+        "FP8",
+        "INT4",
+        "INT8",
+        "KV cache quantization"
       ],
       "arxiv_categories": [
         "cs.CL",
         "cs.LG",
-        "cs.AI"
+        "cs.AI",
+        "cs.DC"
+      ]
+    },
+    {
+      "id": "tensor_compute_unit_architecture",
+      "name": "张量计算单元结构",
+      "description": "关注 GPU/NPU/TPU 张量计算单元、矩阵乘加阵列、数据流架构、片上存储层次、低精度张量核、AI 加速器微架构和算子映射。",
+      "keywords": [
+        "tensor processing unit",
+        "tensor core",
+        "matrix multiply unit",
+        "systolic array",
+        "AI accelerator architecture",
+        "NPU architecture",
+        "GPU tensor core",
+        "low precision tensor compute",
+        "dataflow architecture",
+        "on-chip memory hierarchy"
+      ],
+      "arxiv_categories": [
+        "cs.AR",
+        "cs.DC",
+        "cs.LG",
+        "cs.PF"
+      ]
+    },
+    {
+      "id": "llm_inference_cluster_communication",
+      "name": "大模型推理集群通信优化",
+      "description": "关注分布式大模型推理、prefill/decode 分离、张量并行、流水并行、专家并行、跨节点通信、调度、负载均衡和 serving 系统吞吐延迟优化。",
+      "keywords": [
+        "LLM inference serving",
+        "distributed inference",
+        "inference cluster",
+        "tensor parallelism",
+        "pipeline parallelism",
+        "expert parallelism",
+        "all-reduce",
+        "collective communication",
+        "prefill decode disaggregation",
+        "serving scheduler"
+      ],
+      "arxiv_categories": [
+        "cs.DC",
+        "cs.PF",
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "kvcache_compression_storage_scheduling",
+      "name": "KV cache 压缩与存储调度",
+      "description": "关注大模型推理中的 KV cache 压缩、淘汰、分页、卸载、预取、层级存储、显存管理和长上下文推理效率优化。",
+      "keywords": [
+        "KV cache compression",
+        "KV cache eviction",
+        "KV cache scheduling",
+        "paged attention",
+        "attention cache",
+        "long context inference",
+        "memory offloading",
+        "GPU memory management",
+        "cache prefetching",
+        "LLM serving memory"
+      ],
+      "arxiv_categories": [
+        "cs.CL",
+        "cs.LG",
+        "cs.DC",
+        "cs.PF"
       ]
     }
   ],
@@ -171,7 +242,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.25143v1",
@@ -227,7 +298,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.25054v1",
@@ -366,7 +437,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.23078v1",
@@ -503,7 +574,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.25745v1",
@@ -558,7 +629,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.25367v1",
@@ -846,7 +917,7 @@
       },
       "first_seen_at": "2026-05-28T13:42:08.808451+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.23074v1",
@@ -904,7 +975,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.26678v1",
@@ -1229,8 +1300,8 @@
         "why_relevant": "关键词命中：post-training quantization；arXiv 分类重合：cs.LG"
       },
       "first_seen_at": "2026-05-28T09:35:48.728882+00:00",
-      "last_seen_at": "2026-05-28T13:32:32.765436+00:00",
-      "retained_from_previous_run": true
+      "last_seen_at": "2026-05-28T13:55:18.836936+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "2605.27003v1",
@@ -1520,7 +1591,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.27646v1",
@@ -1735,7 +1806,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.22504v1",
@@ -1788,7 +1859,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.26628v1",
@@ -2229,7 +2300,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.27570v1",
@@ -2285,7 +2356,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.27030v1",
@@ -2346,7 +2417,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.25085v1",
@@ -2853,7 +2924,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.25550v1",
@@ -2991,7 +3062,7 @@
       },
       "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
-      "retained_from_previous_run": false
+      "retained_from_previous_run": true
     },
     {
       "id": "2605.27808v1",
@@ -3307,22 +3378,22 @@
   ],
   "stats": {
     "paper_count": 46,
-    "new_paper_count": 15,
-    "days": 7,
+    "new_paper_count": 1,
+    "days": 1,
     "collection_mode": "lookback",
-    "collection_cutoff_iso": "2026-05-21T13:43:34.801628+00:00",
+    "collection_cutoff_iso": "2026-05-27T13:55:18.836936+00:00",
     "max_per_topic": 25,
     "llm_enabled": false,
     "llm_concurrency": 2,
     "recent_history_days": 45,
-    "successful_fetches": 1,
+    "successful_fetches": 4,
     "failed_fetches": 0,
-    "retained_paper_count": 31,
-    "retained_recent_low_count": 31,
+    "retained_paper_count": 45,
+    "retained_recent_low_count": 43,
     "dropped_low_relevance_count": 0,
     "max_stored_papers": 800,
     "max_data_bytes": 8388608,
-    "data_bytes": 192525,
+    "data_bytes": 194769,
     "storage_trimmed_count": 0,
     "storage_trimmed_by_level": {
       "high": 0,
