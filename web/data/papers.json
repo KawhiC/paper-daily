@@ -1,6 +1,6 @@
 {
-  "generated_at": "Thu, 28 May 2026 13:42:08 +0000",
-  "generated_at_iso": "2026-05-28T13:42:08.808451+00:00",
+  "generated_at": "Thu, 28 May 2026 13:43:34 +0000",
+  "generated_at_iso": "2026-05-28T13:43:34.801628+00:00",
   "config_source": "issue",
   "topics": [
     {
@@ -115,6 +115,121 @@
       "retained_from_previous_run": true
     },
     {
+      "id": "2605.26733v1",
+      "source": "arXiv",
+      "title": "Stabilizing Recurrent Dynamics for Test-Time Scalable Latent Reasoning in Looped Language Models",
+      "authors": [
+        "Xiao-Wen Yang",
+        "Ziyu Han",
+        "Xi-Hua Zhang",
+        "Wen-Da Wei",
+        "Jie-Jing Shao",
+        "Lan-Zhe Guo",
+        "Yu-Feng Li"
+      ],
+      "summary": "Looped Language Models (LoopLMs) enable efficient latent reasoning through depth recurrence, yet exhibit unreliable test-time scaling behavior: performance often peaks at a certain iteration depth and then collapses with further recurrence. Through latent dynamics analysis, we find an inherent trade-off between stability and effectiveness in existing architectures and strategies. By conceptualizing reasoning as uncertainty reduction, we propose that convergence toward stable fixed points while preserving effectiveness represents a promising way. To this end, we propose STARS (STAbility-driven Recurrent Scaling), a training framework that constrains latent states to approach asymptotically stable fixed points. This is realized via efficient Jacobian Spectral Radius Regularization with random loop sampling, enabling STARS to maximize effectiveness while ensuring rigorous stability. Experiments on arithmetic tasks show that STARS achieves reliable test-time scaling, and on complex mathematical reasoning it substantially mitigates performance degradation as recurrence depth increases while also improving peak performance.",
+      "published": "2026-05-26T09:11:12Z",
+      "updated": "2026-05-26T09:11:12Z",
+      "paper_url": "http://arxiv.org/abs/2605.26733v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.26733v1",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.434,
+          "level": "medium",
+          "reason": "关键词命中：latent reasoning、test-time scaling；arXiv 分类重合：cs.AI、cs.LG",
+          "keyword_hits": [
+            "latent reasoning",
+            "test-time scaling"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.434,
+        "level": "medium",
+        "reason": "关键词命中：latent reasoning、test-time scaling；arXiv 分类重合：cs.AI、cs.LG",
+        "keyword_hits": [
+          "latent reasoning",
+          "test-time scaling"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Looped Language Models (LoopLMs) enable efficient latent reasoning through depth recurrence, yet exhibit unreliable test-time scaling behavior: performance often peaks at a certain iteration depth and then collapses with further recurrence.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：latent reasoning、test-time scaling；arXiv 分类重合：cs.AI、cs.LG"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "2605.25143v1",
+      "source": "arXiv",
+      "title": "Beyond the Frontier: Stochastic Backtracking for Efficient Test-Time Scaling",
+      "authors": [
+        "Dao Tran",
+        "Duc Anh Le",
+        "Ngoc Luu",
+        "Quan Pham",
+        "Tung Pham",
+        "Hung Bui"
+      ],
+      "summary": "Test-time scaling improves language model reasoning by spending additional compute to explore multiple solution trajectories. The key challenge is to maximize accuracy while minimizing the total number of generated tokens during reasoning. Recent PRM-guided methods score intermediate prefixes to steer this search, but most are frontier-only: they keep only the current active prefixes and irreversibly prune or resample away the rest using noisy PRM scores. This can cause premature commitment, diversity collapse, and the loss of prefixes that still admit correct continuations. We introduce stochastic backtracking over a persistent pool of historical prefixes, allowing test-time compute to revisit previously generated states instead of only expanding the current frontier. To make this efficient, we propose two complementary mechanisms. Subpool Selection strengthens greedy PRM-guided search by applying Top-N selection within random subpools, giving historical prefixes a chance to bypass over-scored frontier candidates. Power Backtrack Sequential Monte Carlo extends SMC-style resampling to the persistent pool using powered PRM scores and mixture-corrected weights. Across mathematical reasoning benchmarks and model scales, our methods consistently achieve higher accuracy per token count, and the same level of accuracy using only a fraction of the token count in comparison to strong PRM-guided baselines, demonstrating that persistent-pool stochastic backtracking provides a simple and effective way to improve the accuracy-token trade-off in test-time scaling.",
+      "published": "2026-05-24T15:48:57Z",
+      "updated": "2026-05-24T15:48:57Z",
+      "paper_url": "http://arxiv.org/abs/2605.25143v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.25143v1",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.425,
+          "level": "medium",
+          "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI、cs.LG",
+          "keyword_hits": [
+            "test-time scaling"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.425,
+        "level": "medium",
+        "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI、cs.LG",
+        "keyword_hits": [
+          "test-time scaling"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Test-time scaling improves language model reasoning by spending additional compute to explore multiple solution trajectories.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI、cs.LG"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
+    },
+    {
       "id": "2605.25054v1",
       "source": "arXiv",
       "title": "Scale When Needed: Adaptive Neuron-level Mixed Precision Quantization Aware Training",
@@ -192,6 +307,66 @@
       "first_seen_at": "2026-05-28T13:32:32.765436+00:00",
       "last_seen_at": "2026-05-28T13:32:32.765436+00:00",
       "retained_from_previous_run": true
+    },
+    {
+      "id": "2605.23491v2",
+      "source": "arXiv",
+      "title": "CoSPlay: Cooperative Self-Play at Test-Time with Self-Generated Code and Unit Test",
+      "authors": [
+        "Zhangyi Hu",
+        "Chenhui Liu",
+        "Tian Huang",
+        "Jindong Li",
+        "Yang Yang",
+        "Jiemin Wu",
+        "Zining Zhong",
+        "Menglin Yang",
+        "Yutao Yue"
+      ],
+      "summary": "Recently, Reinforcement Learning with Verifiable Rewards (RLVR) and Test-Time Scaling (TTS) have advanced LLM code generation through executable verification. Yet Ground-Truth Unit Tests (GT UTs) remain a bottleneck: SOTA RLVR methods require them for costly training, while existing TTS methods lose competitiveness without them. This motivates GT-free TTS, where existing methods directly use self-generated UTs to refine and select code candidates. Yet such UTs are often noisy or spuriously coupled with wrong code, and UT quality in turn cannot be validated without reliable code. The key challenge is therefore to jointly improve both. To this end, we present CoSPlay, a GT-free, training-free framework that jointly improves codes and UTs through cooperative self-play. It first explores diverse solution ideas and identifies their potential failure modes to produce discriminative UT ideas. It then uses bidirectional pass-count signals from the Code-UT execution matrix to iteratively prune or fix weak codes and refresh or replace unreliable UTs, letting the two pools co-evolve. Finally, when multiple codes remain tied at the highest pass count, it picks the final code from the largest output-consensus cluster, since correct codes agree on the same inputs while wrong codes diverge. Experiments on four challenging benchmarks show that CoSPlay on Qwen2.5-7B-Instruct improves average BoN from 22.1% to 33.2% and UT accuracy from 14.6% to 78.3%, matching or surpassing the RLVR model CURE-7B. When applied to CURE-7B, it further improves BoN by 5.7%. CoSPlay also generalizes across diverse backbones and outperforms GT-free TTS baselines under comparable token budgets, with continued gains as the budget scales up. These results suggest a scalable inference strategy for competitive code generation without any GT data.",
+      "published": "2026-05-22T10:53:17Z",
+      "updated": "2026-05-25T03:01:24Z",
+      "paper_url": "http://arxiv.org/abs/2605.23491v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.23491v2",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.415,
+          "level": "low",
+          "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI、cs.CL、cs.LG",
+          "keyword_hits": [
+            "test-time scaling"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.415,
+        "level": "low",
+        "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI、cs.CL、cs.LG",
+        "keyword_hits": [
+          "test-time scaling"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Recently, Reinforcement Learning with Verifiable Rewards (RLVR) and Test-Time Scaling (TTS) have advanced LLM code generation through executable verification.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI、cs.CL、cs.LG"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "2605.23078v1",
@@ -273,6 +448,117 @@
       "first_seen_at": "2026-05-28T13:32:32.765436+00:00",
       "last_seen_at": "2026-05-28T13:32:32.765436+00:00",
       "retained_from_previous_run": true
+    },
+    {
+      "id": "2605.28292v1",
+      "source": "arXiv",
+      "title": "CIRF: Tokenizing Chain-of-Thoughts into Reusable Functional Units for Efficient Latent Reasoning in Large Language Models",
+      "authors": [
+        "Yukyung Lee",
+        "Yumeng Shen",
+        "Jinhyeong Park",
+        "Hyein Yang",
+        "Jun-Hyung Park"
+      ],
+      "summary": "Implicit Chain-of-Thought (CoT) reduces the inference cost of large language models by internalizing the explicit rationales. However, existing approaches typically lack alignment with explicit rationales and adaptivity to example complexity. In this work, we propose CIRF (\\textit{\\underline{C}hain-of-thoughts \\underline{I}nto \\underline{R}eusable \\underline{F}unctional units}), an implicit CoT framework that performs reasoning as a dynamic sequence of discrete functional tokens. CIRF assigns a functional token to each semantically coherent reasoning unit in explicit CoT traces. The model is then fine-tuned to autoregressively generate functional tokens and their optional results, followed by the final answer. This design aligns latent reasoning with a sequence of functional units, facilitating parallel training, explicit rationale alignment, and adaptive reasoning. Extensive experiments on mathematical, symbolic, and commonsense reasoning benchmarks show that CIRF provides a favorable accuracy-latency trade-off compared with state-of-the-art implicit CoT methods. Further analyses demonstrate that CIRF constructs distinct, interpretable functional tokens, leading to consistent performance improvements.",
+      "published": "2026-05-27T10:40:46Z",
+      "updated": "2026-05-27T10:40:46Z",
+      "paper_url": "http://arxiv.org/abs/2605.28292v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.28292v1",
+      "categories": [
+        "cs.CL"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.413,
+          "level": "low",
+          "reason": "关键词命中：latent reasoning、implicit chain-of-thought；arXiv 分类重合：cs.CL",
+          "keyword_hits": [
+            "latent reasoning",
+            "implicit chain-of-thought"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.413,
+        "level": "low",
+        "reason": "关键词命中：latent reasoning、implicit chain-of-thought；arXiv 分类重合：cs.CL",
+        "keyword_hits": [
+          "latent reasoning",
+          "implicit chain-of-thought"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Implicit Chain-of-Thought (CoT) reduces the inference cost of large language models by internalizing the explicit rationales.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：latent reasoning、implicit chain-of-thought；arXiv 分类重合：cs.CL"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "2605.25745v1",
+      "source": "arXiv",
+      "title": "Selective Latent Thinking: Adaptive Compression of LLM Reasoning Chains",
+      "authors": [
+        "Hui Xie",
+        "Jie Liu",
+        "Ziyue Qiao",
+        "Joaquin Vanschore"
+      ],
+      "summary": "Explicit chain-of-thought (CoT) reasoning substantially improves the reasoning ability of large language models (LLMs), but incurs high inference cost due to lengthy autoregressive traces. Existing latent reasoning methods offer a promising alternative, yet they often treat reasoning as uniformly compressible, causing precision-critical intermediate steps to be overly compressed and thereby degrading reasoning accuracy. In this work, we propose Selective Latent Thinking (SLT), a framework that selectively compresses redundant reasoning spans into latent representations while preserving precision-critical spans as explicit CoT within the same reasoning trajectory. Specifically, SLT first uses a lightweight decoder to anticipate a short upcoming reasoning span, and then applies confidence-based gating to determine the longest span that can be reliably compressed. The accepted span is encoded into a compact latent representation to improve reasoning efficiency, while uncertain or precision-critical reasoning remains in explicit CoT form to preserve accuracy. To learn this selective compression policy, SLT adopts a three-stage training strategy that combines span-level latent compression, reliability-aware future reasoning prediction, and trajectory-level reinforcement learning to optimize the trade-off between answer correctness and reasoning cost. Extensive experiments across four mathematical reasoning benchmarks demonstrate that SLT achieves 22.7\\% higher accuracy than latent reasoning baselines at comparable compression ratios, while reducing reasoning chain length by 58.4\\% with only 2.8\\% accuracy degradation compared to explicit CoT,Our code can be found in https://github.com/hunshi34/SLT.",
+      "published": "2026-05-25T11:57:09Z",
+      "updated": "2026-05-25T11:57:09Z",
+      "paper_url": "http://arxiv.org/abs/2605.25745v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.25745v1",
+      "categories": [
+        "cs.CL"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.413,
+          "level": "low",
+          "reason": "关键词命中：latent reasoning、reasoning efficiency；arXiv 分类重合：cs.CL",
+          "keyword_hits": [
+            "latent reasoning",
+            "reasoning efficiency"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.413,
+        "level": "low",
+        "reason": "关键词命中：latent reasoning、reasoning efficiency；arXiv 分类重合：cs.CL",
+        "keyword_hits": [
+          "latent reasoning",
+          "reasoning efficiency"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Explicit chain-of-thought (CoT) reasoning substantially improves the reasoning ability of large language models (LLMs), but incurs high inference cost due to lengthy autoregressive traces.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：latent reasoning、reasoning efficiency；arXiv 分类重合：cs.CL"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "2605.25367v1",
@@ -559,7 +845,65 @@
         "why_relevant": "关键词命中：implicit chain-of-thought；arXiv 分类重合：cs.LG"
       },
       "first_seen_at": "2026-05-28T13:42:08.808451+00:00",
-      "last_seen_at": "2026-05-28T13:42:08.808451+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "2605.23074v1",
+      "source": "arXiv",
+      "title": "PathCal: State-Aware Reflection-Marker Calibration for Efficient Reasoning",
+      "authors": [
+        "Lingyu Jiang",
+        "Zirui Li",
+        "Shuo Xing",
+        "Peiran Li",
+        "Tsubasa Takahashi",
+        "Dengzhe Hou",
+        "Zhengzhong Tu",
+        "Kazunori Yamada",
+        "Fangzhou Lin"
+      ],
+      "summary": "The emergence of Large Reasoning Language Models (LRMs) has paved the way for tackling complex reasoning tasks through test-time scaling by generating long-form Chain-of-Thought (CoT) trajectories during inference. Meanwhile, these trajectories often contain explicit reflection markers such as ``wait'', ``but'', and ``alternatively'', signaling hesitation, revision, and the consideration of alternative explorations, respectively. Recent studies on test-time control leverage such markers as lightweight handles for steering reasoning, typically treating them as a single coarse-grained category rather than distinguishing their distinct functional roles. In this paper, we conduct type-wise suppression and fixed-prefix intervention, revealing that reflection markers differ not only in their functional roles but also in when they exert the greatest influence. Specifically, different marker classes affect accuracy and generation length in distinct ways, and marker choices are most consequential before the model settles into a stable reasoning trajectory. Motivated by these findings, we introduce PathCal, a novel training-free decoding controller that calibrates reasoning paths by distinguishing marker types and intervening only at locally uncertain states. At each decoding step, PathCal utilizes the distribution over reflection-markers to estimate local competition between maintaining the current reasoning trajectory and initiating a competing branch, and softly rebalances marker logits when competing-branch evidence becomes excessive. Experiments across six reasoning benchmarks demonstrate that PathCal achieves a better efficiency--performance trade-off, improving or preserving accuracy while reducing generation length, without relying on external verifiers or additional sampling.",
+      "published": "2026-05-21T22:13:20Z",
+      "updated": "2026-05-21T22:13:20Z",
+      "paper_url": "http://arxiv.org/abs/2605.23074v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.23074v1",
+      "categories": [
+        "cs.AI"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.373,
+          "level": "low",
+          "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI",
+          "keyword_hits": [
+            "test-time scaling"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.373,
+        "level": "low",
+        "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI",
+        "keyword_hits": [
+          "test-time scaling"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "The emergence of Large Reasoning Language Models (LRMs) has paved the way for tackling complex reasoning tasks through test-time scaling by generating long-form Chain-of-Thought (CoT) trajectories during inference.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
       "retained_from_previous_run": false
     },
     {
@@ -1123,6 +1467,62 @@
       "retained_from_previous_run": true
     },
     {
+      "id": "2605.25230v2",
+      "source": "arXiv",
+      "title": "Boosting Inference with Guided Reasoning: Stochastic Exploration for Recursive Models",
+      "authors": [
+        "Andrew Corbett",
+        "Archit Sood",
+        "Anna Tzatzopoulou",
+        "Sai-Aakash Ramesh",
+        "Tim Dodwell"
+      ],
+      "summary": "Recent work on recursive architectures has shown that tiny neural networks can be surprisingly powerful on structured reasoning tasks. The trick is to model reasoning trajectories with a latent dynamical system. We argue that the inference-time behaviour of these architectures is best understood as approximate inference over latent reasoning trajectories, with deterministic recursion as the one-particle, zero-noise limit. We make this view operational through guided stochastic exploration: stochastic perturbations of the reasoning dynamics propose neighbouring trajectories, and the model's existing early-stopping head reweights them online. The framework yields three label-free diagnostics: local stability, guide alignment, and cloud-token entropy. These predict, from inference traces alone, whether the procedure will help and which of its outputs to trust. On Sudoku-Extreme it lifts exact-solve accuracy from $85.9\\%$ to $98.0\\%$ without retraining; on Maze-Hard the diagnostics flag a misaligned guide, as validation performance later confirms. The same machinery thus characterises both when recursive reasoning has room to improve at the trajectory level and when the model's internal guide can recover it.",
+      "published": "2026-05-24T19:32:20Z",
+      "updated": "2026-05-26T19:43:02Z",
+      "paper_url": "http://arxiv.org/abs/2605.25230v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.25230v2",
+      "categories": [
+        "cs.AI"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.351,
+          "level": "low",
+          "reason": "关键词命中：latent reasoning、structured reasoning；arXiv 分类重合：cs.AI",
+          "keyword_hits": [
+            "latent reasoning",
+            "structured reasoning"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.351,
+        "level": "low",
+        "reason": "关键词命中：latent reasoning、structured reasoning；arXiv 分类重合：cs.AI",
+        "keyword_hits": [
+          "latent reasoning",
+          "structured reasoning"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Recent work on recursive architectures has shown that tiny neural networks can be surprisingly powerful on structured reasoning tasks.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：latent reasoning、structured reasoning；arXiv 分类重合：cs.AI"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
+    },
+    {
       "id": "2605.27646v1",
       "source": "arXiv",
       "title": "Hurwitz Quaternion Multiplicative Quantization for KV Cache Compression",
@@ -1275,6 +1675,120 @@
       "first_seen_at": "2026-05-28T13:32:32.765436+00:00",
       "last_seen_at": "2026-05-28T13:32:32.765436+00:00",
       "retained_from_previous_run": true
+    },
+    {
+      "id": "2605.23163v2",
+      "source": "arXiv",
+      "title": "Fast-dDrive: Efficient Block-Diffusion VLM for Autonomous Driving",
+      "authors": [
+        "Kewei Zhang",
+        "Jin Wang",
+        "Sensen Gao",
+        "Chengyue Wu",
+        "Yulong Cao",
+        "Songyang Han",
+        "Boris Ivanovic",
+        "Langechuan Liu",
+        "Marco Pavone",
+        "Song Han",
+        "Daquan Zhou",
+        "Enze Xie"
+      ],
+      "summary": "End-to-end autonomous driving via Vision-Language-Action (VLA) models demands a precarious balance between high-fidelity trajectory planning and efficient inference. Existing paradigms typically fall short: autoregressive (AR) VLAs are memory-bandwidth-bound on edge hardware and prone to exposure-bias drift, while full-sequence diffusion models preclude KV-cache reuse and suffer from \"logical leakage\" that violates the fundamental perceive-then-plan causality. We present Fast-dDrive, a block-diffusion VLA that performs bidirectional refinement within semantic units while enforcing strict causal ordering across them. Leveraging the observation that driving VLAs often emit structured JSON-like outputs, Fast-dDrive freezes structural tokens into a section scaffold and employs a section-aware training recipe that prioritizes safety-critical planning. We further introduce Scaffold Speculative Decoding to achieve AR-equivalent quality at significantly higher throughput. Finally, we propose a low-overhead test-time scaling scheme: by forking $N$ stochastic trajectory rollouts from a single shared-prefix KV cache and averaging them, we effectively suppress prediction variance at a fractional computational cost. Empirical results demonstrate that Fast-dDrive redefines the speed-accuracy frontier for driving agents. On the WOD-E2E test set, Fast-dDrive achieves SOTA ADE@3s and ADE@5s, alongside the highest RFS among diffusion-based VLAs; on nuScenes, it reduces average L2 error to $0.32$m (a $22\\%$ improvement). When integrated with SGLang, our framework delivers $12\\times$ throughput speedup over the AR baseline, narrowing the gap between high-capacity VLAs and the efficiency demands of real-time on-vehicle deployment.",
+      "published": "2026-05-22T02:31:32Z",
+      "updated": "2026-05-25T07:32:46Z",
+      "paper_url": "http://arxiv.org/abs/2605.23163v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.23163v2",
+      "categories": [
+        "cs.CL"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.342,
+          "level": "low",
+          "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.CL",
+          "keyword_hits": [
+            "test-time scaling"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.342,
+        "level": "low",
+        "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.CL",
+        "keyword_hits": [
+          "test-time scaling"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "End-to-end autonomous driving via Vision-Language-Action (VLA) models demands a precarious balance between high-fidelity trajectory planning and efficient inference.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：test-time scaling；arXiv 分类重合：cs.CL"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "2605.22504v1",
+      "source": "arXiv",
+      "title": "LACO: Adaptive Latent Communication for Collaborative Driving",
+      "authors": [
+        "Tianhao Chen",
+        "Yuheng Wu",
+        "Dongman Lee"
+      ],
+      "summary": "Collaborative driving aims to improve safety and efficiency by enabling connected vehicles to coordinate under partial observability. Recent approaches have evolved from sharing visual features for perception to exchanging language-based reasoning through foundation models for behavioral coordination. Though communicating in language provides intuitive information, it introduces two challenges: high latency caused by autoregressive decoding and information loss caused by compressing rich internal representations into discrete tokens. To address these challenges, we analyze latent communication in collaborative driving under inherent limitations of multi-agent settings. Our analysis reveals agent identity confusion, where direct fusion of latent states entangles decision representations across vehicles. Motivated by this, we propose LACO, a training-free \\textbf{LA}tent \\textbf{CO}mmunication paradigm that seamlessly adapts pretrained driving models to collaborative settings. LACO introduces Iterative Latent Deliberation (ILD) for latent reasoning, Cross-Horizon Saliency Attribution (CHSA) for communication-efficient information selection, and Structured Semantic Knowledge Distillation (SSKD) to stabilize ego-centric decision making. Closed-loop experiments in CARLA show that LACO notably reduces communication and inference latency while maintaining strong collaborative driving performance.",
+      "published": "2026-05-21T13:54:29Z",
+      "updated": "2026-05-21T13:54:29Z",
+      "paper_url": "http://arxiv.org/abs/2605.22504v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.22504v1",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.342,
+          "level": "low",
+          "reason": "关键词命中：latent reasoning；arXiv 分类重合：cs.AI",
+          "keyword_hits": [
+            "latent reasoning"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.342,
+        "level": "low",
+        "reason": "关键词命中：latent reasoning；arXiv 分类重合：cs.AI",
+        "keyword_hits": [
+          "latent reasoning"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Collaborative driving aims to improve safety and efficiency by enabling connected vehicles to coordinate under partial observability.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：latent reasoning；arXiv 分类重合：cs.AI"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "2605.26628v1",
@@ -1659,6 +2173,180 @@
       "first_seen_at": "2026-05-28T13:32:32.765436+00:00",
       "last_seen_at": "2026-05-28T13:32:32.765436+00:00",
       "retained_from_previous_run": true
+    },
+    {
+      "id": "2605.28422v1",
+      "source": "arXiv",
+      "title": "VITAL: Visual-Semantic Dual Supervision for Enhanced and Interpretable Latent Reasoning in Medical MLLMs",
+      "authors": [
+        "Qiaoru Li",
+        "Shaotian Liang",
+        "Jintao Chen",
+        "Haoran Sun",
+        "Yuxiang Cai",
+        "Jianwei Yin",
+        "Yankai Jiang"
+      ],
+      "summary": "Latent reasoning enables reasoning over continuous hidden states rather than explicit tokens, avoiding the language bottleneck and inference overhead of chain-of-thought for medical VQA. However, existing methods suffer from modality collapse, insufficient visual supervision, and train-inference mismatch. Moreover, their opaque latent states offer no interpretability, which is critical in clinical applications. We propose VITAL, a latent-space reasoning framework for medical MLLMs with visual-semantic dual supervision: an auxiliary text decoder reconstructs reasoning chains from latent states, while a visual projector regresses ROI features from a frozen, independent medical vision encoder. Both modules are discarded at inference with zero overhead, yet can be re-attached post-hoc for dual interpretability, providing textual and visual explanations of the reasoning process without sacrificing efficiency. We construct a 61K dataset spanning 9 imaging modalities, exceeding prior medical visual latent reasoning datasets by an order of magnitude. Experiments on 7 benchmarks show that VITAL consistently and substantially outperforms the backbone, all latent reasoning baselines, and medical MLLMs trained on far larger data, achieving state-of-the-art results competitive with trillion-parameter proprietary models.",
+      "published": "2026-05-27T12:53:13Z",
+      "updated": "2026-05-27T12:53:13Z",
+      "paper_url": "http://arxiv.org/abs/2605.28422v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.28422v1",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.311,
+          "level": "low",
+          "reason": "关键词命中：latent reasoning；arXiv 分类重合：cs.AI",
+          "keyword_hits": [
+            "latent reasoning"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.311,
+        "level": "low",
+        "reason": "关键词命中：latent reasoning；arXiv 分类重合：cs.AI",
+        "keyword_hits": [
+          "latent reasoning"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Latent reasoning enables reasoning over continuous hidden states rather than explicit tokens, avoiding the language bottleneck and inference overhead of chain-of-thought for medical VQA.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：latent reasoning；arXiv 分类重合：cs.AI"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "2605.27570v1",
+      "source": "arXiv",
+      "title": "LaneRoPE: Positional Encoding for Collaborative Parallel Reasoning and Generation",
+      "authors": [
+        "Gabriele Cesa",
+        "Thomas Hehn",
+        "Aleix Torres-Camps",
+        "Àlex Batlle Casellas",
+        "Jordi Ros-Giralt",
+        "Arash Behboodi",
+        "Tribhuvanesh Orekondy"
+      ],
+      "summary": "Parallel LLM test-time scaling techniques (e.g., best-of-$N$) require drawing $N>1$ sequences conditioned on the same input prompt. These methods boost accuracy while exploiting the computational efficiency of batching $N$ generations. However, each sequence in the batch is traditionally generated independently and hence does not reuse intermediate generations, computations, or observations from other sequences. In this paper, we propose LaneRoPE to enable coordination and collaboration among $N>1$ sequences at generation time. LaneRoPE involves two key ideas: (a) an inter-sequence attention mask to make sampling of sequences dependent on one another; and (b) a RoPE extension that injects positional information that captures relative positions between tokens, both within and outside a particular sequence. We evaluate our approach on mathematical reasoning tasks and find promising results: LaneRoPE enables collaboration among sequences, yielding additional accuracy gains under limited generated sequence length. Importantly, since LaneRoPE enables coordination with minimal changes to the underlying LLM architecture and introduces a negligible overhead at inference time, it is appealing to rapidly incorporate parallel reasoning into existing LLM inference pipelines.",
+      "published": "2026-05-26T18:43:15Z",
+      "updated": "2026-05-26T18:43:15Z",
+      "paper_url": "http://arxiv.org/abs/2605.27570v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.27570v1",
+      "categories": [
+        "cs.AI"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.311,
+          "level": "low",
+          "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI",
+          "keyword_hits": [
+            "test-time scaling"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.311,
+        "level": "low",
+        "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI",
+        "keyword_hits": [
+          "test-time scaling"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Parallel LLM test-time scaling techniques (e.g., best-of-$N$) require drawing $N>1$ sequences conditioned on the same input prompt.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
+    },
+    {
+      "id": "2605.27030v1",
+      "source": "arXiv",
+      "title": "Share More, Search Less: Collaborative Parallel Thinking for Efficient Test-Time Scaling",
+      "authors": [
+        "Xinglin Wang",
+        "Hao Lin",
+        "Shaoxiong Feng",
+        "Peiwen Yuan",
+        "Yiwei Li",
+        "Jiayi Shi",
+        "Yueqi Zhang",
+        "Chuyi Tan",
+        "Ji Zhang",
+        "Boyuan Pan",
+        "Yao Hu",
+        "Kan Li"
+      ],
+      "summary": "Test-Time Scaling (TTS) enhances the reasoning capabilities of large language models by allocating additional inference compute to explore the solution space. However, existing parallel TTS methods typically keep branches isolated during search: intermediate discoveries remain branch-private and cannot guide other branches in time. This information isolation causes substantial redundant exploration, as branches repeatedly rediscover information already found elsewhere and require more search steps to collect complete decision information needed to reach correct answers. To bridge this gap, we propose \\textbf{Collaborative Parallel Thinking (CPT)}, a training-free inference framework that enables search-time information sharing across parallel branches. CPT extracts compact intermediate information from ongoing branches, maintains a deduplicated query-level information pool, and broadcasts pool entries through the input context, allowing each branch in subsequent search steps to reuse discoveries made by other branches rather than rediscover the same information. Empirically, experiments on HMMT and AIME benchmarks show that CPT establishes a stronger accuracy--latency Pareto frontier than strong baselines across rollout budgets and model scales, highlighting search-time collaboration as an effective direction for efficient parallel TTS.",
+      "published": "2026-05-26T13:52:14Z",
+      "updated": "2026-05-26T13:52:14Z",
+      "paper_url": "http://arxiv.org/abs/2605.27030v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.27030v1",
+      "categories": [
+        "cs.CL"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.311,
+          "level": "low",
+          "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.CL",
+          "keyword_hits": [
+            "test-time scaling"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.311,
+        "level": "low",
+        "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.CL",
+        "keyword_hits": [
+          "test-time scaling"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Test-Time Scaling (TTS) enhances the reasoning capabilities of large language models by allocating additional inference compute to explore the solution space.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：test-time scaling；arXiv 分类重合：cs.CL"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "2605.25085v1",
@@ -2110,6 +2798,64 @@
       "retained_from_previous_run": true
     },
     {
+      "id": "2605.24799v1",
+      "source": "arXiv",
+      "title": "Divide-and-Conquer Inference for Large-Scale Visual Recognition with Multimodal Large Language Models",
+      "authors": [
+        "Zhipeng Ye",
+        "Jiaqi Huang",
+        "Feng Jiang",
+        "Qiufeng Wang",
+        "Yikang Duan",
+        "Dawei Wang",
+        "Xihang Zhou",
+        "Qian Qiao"
+      ],
+      "summary": "Multimodal Large Language Models (MLLMs) have demonstrated strong capabilities across a wide range of vision language tasks. However, when applied to large scale image classification, their performance degrades significantly as the label space expands a phenomenon we define as Performance Collapse in Long Sequence Recognition. Through an information theoretic analysis, we reveal that this collapse stems from a fundamental conflict between the escalating information entropy and the prominent attention dilution and decay within attention mechanisms, which impairs the model's ability to maintain a sufficient signal-to-noise ratio when processing extremely long prompts. To mitigate this, we propose Divide-and-Conquer Inference (DCI), a novel test-time scaling strategy for visual recognition with MLLMs. DCI recursively decomposes complex global classification tasks into multiple simpler, localized subproblems and employs a dynamic pruning mechanism to compress the search space. This method effectively improves the local signal to noise ratio and model accuracy by mitigating the inherent weight dilution issues in long-sequence inference. Moreover, while traditional self-attention incurs a prohibitive quadratic computational complexity, DCI achieves more favorable scaling behavior and substantially accelerates inference in large scale classification scenarios. Extensive experiments on benchmarks such as ImageNet-1K and ImageNet-21K demonstrate that DCI consistently improves classification accuracy. This enables lightweight open-source models to rival or even surpass frontier closed-source giants without any additional training or fine-tuning. As a model-agnostic, plug-and-play paradigm, DCI offers an efficient approach for scaling the inferential precision of MLLMs in large-scale scenarios.",
+      "published": "2026-05-24T01:07:05Z",
+      "updated": "2026-05-24T01:07:05Z",
+      "paper_url": "http://arxiv.org/abs/2605.24799v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.24799v1",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.28,
+          "level": "low",
+          "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI",
+          "keyword_hits": [
+            "test-time scaling"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.28,
+        "level": "low",
+        "reason": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI",
+        "keyword_hits": [
+          "test-time scaling"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Multimodal Large Language Models (MLLMs) have demonstrated strong capabilities across a wide range of vision language tasks.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：test-time scaling；arXiv 分类重合：cs.AI"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
+    },
+    {
       "id": "2605.25550v1",
       "source": "arXiv",
       "title": "DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving",
@@ -2191,6 +2937,61 @@
       "first_seen_at": "2026-05-28T13:32:32.765436+00:00",
       "last_seen_at": "2026-05-28T13:32:32.765436+00:00",
       "retained_from_previous_run": true
+    },
+    {
+      "id": "2605.26352v1",
+      "source": "arXiv",
+      "title": "RICE-PO: Turning Retrieval Interactions into Credit Signals for Reasoning Agents",
+      "authors": [
+        "Mingchen Li",
+        "Hansi Zeng",
+        "Zhuo Qian",
+        "Jiatan Huang",
+        "Hamed Zamani",
+        "Hong Yu"
+      ],
+      "summary": "Retrieval is increasingly moving from one-shot matching toward interactive reasoning, where language agents iteratively inspect evidence, reformulate queries, and search again. Training such agents raises a credit-assignment challenge: executable actions such as queries or summaries can be directly evaluated by the retriever, while latent reasoning steps are not directly observable and only affect future executable actions. This asymmetry makes outcome-level reward assignment unreliable, as the same final reward may credit reasoning steps that did not actually shape retrieval success. We propose RICE-PO, a critic-free policy optimization framework that converts retrieval interactions into localized learning signals. RICE-PO selects high-uncertainty executable actions as anchors, evaluates local counterfactual branches using retrieval metrics, and propagates credit to latent reasoning steps only when reasoning-to-action influence is strong and future residual effects are stable. On BRIGHT and BEIR, RICE-PO consistently outperforms prompt-based agents and group-based RL baselines under the same retriever setting. These results show that the structure of agent-environment interaction itself can provide useful supervision for training reasoning-based retrieval agents.",
+      "published": "2026-05-25T21:56:29Z",
+      "updated": "2026-05-25T21:56:29Z",
+      "paper_url": "http://arxiv.org/abs/2605.26352v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.26352v1",
+      "categories": [
+        "cs.CL"
+      ],
+      "seed_topic": "cot_compression",
+      "matches": [
+        {
+          "topic_id": "cot_compression",
+          "topic_name": "思维链压缩",
+          "score": 0.217,
+          "level": "low",
+          "reason": "关键词命中：latent reasoning；arXiv 分类重合：cs.CL",
+          "keyword_hits": [
+            "latent reasoning"
+          ]
+        }
+      ],
+      "best_match": {
+        "topic_id": "cot_compression",
+        "topic_name": "思维链压缩",
+        "score": 0.217,
+        "level": "low",
+        "reason": "关键词命中：latent reasoning；arXiv 分类重合：cs.CL",
+        "keyword_hits": [
+          "latent reasoning"
+        ]
+      },
+      "chinese_summary": {
+        "problem": "未配置模型 API，当前仅基于标题、摘要和关键词生成基础摘要。",
+        "method": "Retrieval is increasingly moving from one-shot matching toward interactive reasoning, where language agents iteratively inspect evidence, reformulate queries, and search again.",
+        "innovation": "需要接入模型 API 后自动抽取更精确的中文创新点。",
+        "evidence": "来源摘要可在论文原文中核验。",
+        "limitations": "基础模式不会阅读全文，也不会进行深度技术对比。",
+        "why_relevant": "关键词命中：latent reasoning；arXiv 分类重合：cs.CL"
+      },
+      "first_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "last_seen_at": "2026-05-28T13:43:34.801628+00:00",
+      "retained_from_previous_run": false
     },
     {
       "id": "2605.27808v1",
@@ -2505,11 +3306,11 @@
     }
   ],
   "stats": {
-    "paper_count": 32,
-    "new_paper_count": 1,
-    "days": 1,
+    "paper_count": 46,
+    "new_paper_count": 15,
+    "days": 7,
     "collection_mode": "lookback",
-    "collection_cutoff_iso": "2026-05-27T13:42:08.808451+00:00",
+    "collection_cutoff_iso": "2026-05-21T13:43:34.801628+00:00",
     "max_per_topic": 25,
     "llm_enabled": false,
     "llm_concurrency": 2,
@@ -2517,11 +3318,11 @@
     "successful_fetches": 1,
     "failed_fetches": 0,
     "retained_paper_count": 31,
-    "retained_recent_low_count": 30,
+    "retained_recent_low_count": 31,
     "dropped_low_relevance_count": 0,
     "max_stored_papers": 800,
     "max_data_bytes": 8388608,
-    "data_bytes": 140893,
+    "data_bytes": 192525,
     "storage_trimmed_count": 0,
     "storage_trimmed_by_level": {
       "high": 0,
